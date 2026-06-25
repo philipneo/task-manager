@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">Productivity Tool</p>
+      <h1>Task Manager</h1>
+      <p>Plan work, track priority, and keep daily tasks moving.</p>
+    </header>
+
+    <form id="taskForm" class="panel">
+      <input id="title" placeholder="Task title" required>
+      <select id="priority">
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+      </select>
+      <input id="due" type="date">
+      <button type="submit">Add Task</button>
+    </form>
+
+    <section class="toolbar">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="completed">Completed</button>
+    </section>
+
+    <section id="tasks" class="list"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
